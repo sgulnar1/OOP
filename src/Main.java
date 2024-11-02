@@ -3,12 +3,52 @@ import java.util.function.*;
 
 public class Main {
     public interface NestedInterface {
-        default void nestedMethod( ) {
+        default void nestedMethod() {
             System.out.println(" nested method");
         }
     }
+
     public static void main(String[] args) {
-        NestedInterface nestedInterface = new NestedInterface() {};
+        Doctor doctor = new Doctor();
+        doctor.setName("Gulnar");
+        doctor.setSurname("salehova");
+        doctor.setAge(29);
+        System.out.println(doctor);
+        DoctorR doctorR = new DoctorR("gasf", 17, "dsfds", ":asfdsfds");
+        System.out.println(doctorR.email());
+        System.out.println(doctorR);
+        DaysOfWeek daysOfWeek = DaysOfWeek.MONDAY;
+        System.out.println("monday: " + daysOfWeek.name());
+        for (DaysOfWeek day : DaysOfWeek.values())
+            System.out.println("for: " + day.name());
+        DaysOfWeek daysOfWeek1 = DaysOfWeek.valueOf("MONDAY");
+
+        System.out.println("MONDAY valueof: " + daysOfWeek1.name());
+        //DaysOfWeek daysOfWeek2 = DaysOfWeek.valueOf("monday");
+        //System.out.println("monday valueof: " +daysOfWeek2.name());
+        switch (daysOfWeek1) {
+            case SATURDAY:
+                System.out.println("weekend");
+                break;
+            case SUNDAY:
+                System.out.println("weekend");
+                break;
+            default:
+                System.out.println("workday");
+        }
+//        AbstractClass2 abstractClass2 = new AbstractClass2();
+//        System.out.println(abstractClass2.test());
+
+        System.out.println("********* " + DaysOfWeek.MONDAY.a);
+        //DaysOfWeek daysOfWeek = new Day
+
+        int Static = 5;
+//        int const = 4;
+//        int goto=17;
+//        int true =17;
+//        int null=47;
+        NestedInterface nestedInterface = new NestedInterface() {
+        };
         nestedInterface.nestedMethod();
         Consumer<String> consumer = new Consumer<String>() {
             @Override

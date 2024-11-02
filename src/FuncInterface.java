@@ -1,6 +1,6 @@
 @FunctionalInterface
 public interface FuncInterface {
-    void method();
+     void method();
     public static interface NestedInterface {
          void nestedMethod();
     }

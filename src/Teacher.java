@@ -1,8 +1,15 @@
 public class Teacher extends Person implements Cloneable {
     private String name;
+    public static String surname;
 
     public Teacher(String name) {
+        super();
         this.name = name;
+    }
+
+    public void printPerson() {
+
+        super.printPerson();
     }
 
     public String getName() {

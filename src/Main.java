@@ -9,6 +9,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        var a='d';
+        Person person = new Doctor();
+        System.out.println("print: " + person.className(person));
+        DoctorWorkQuality doctorWorkQuality = new DoctorWorkQuality();
+        doctorWorkQuality.calculate();
         Doctor doctor = new Doctor();
         doctor.setName("Gulnar");
         doctor.setSurname("salehova");

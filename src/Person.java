@@ -1,8 +1,62 @@
-public class Person implements PersonInterface, FuncInterface.NestedInterface {
+public abstract class Person implements PersonInterface, FuncInterface.NestedInterface {
+    private String name;
+    private int age;
+    private String surname;
+    private String email;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getC() {
+        return c;
+    }
+
+    public void setC(int c) {
+        this.c = c;
+    }
+
+    public abstract String className(Person person); /*{
+        if (person instanceof Doctor) {
+            return "Doctor";
+        } else if (person instanceof Teacher)
+            return "Teacher";
+        else return "Person";
+    }*/
+
     public Person() {
         System.out.println("Person constructor");
     }
-    public int c=10;
+
+    public int c = 10;
 
 
     @Override
@@ -26,14 +80,7 @@ public class Person implements PersonInterface, FuncInterface.NestedInterface {
     }
 
     public static void main(String[] args) {
-        Person p = new Person();
-        Person p1 = new Person();
-        Person p2 = new Person();
-        Person p3 = new Person();
-        p.printPerson();
-        p.print();
         PersonInterface.privateStaticMethod();
-        System.out.println(p.calculate(10));
         FuncInterface.NestedInterface f = new FuncInterface.NestedInterface() {
             @Override
             public void nestedMethod() {

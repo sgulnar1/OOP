@@ -7,6 +7,11 @@ public class Teacher extends Person implements Cloneable {
         this.name = name;
     }
 
+    @Override
+    public String className(Person person) {
+        return "Teacher";
+    }
+
     public void printPerson() {
 
         super.printPerson();
@@ -22,9 +27,6 @@ public class Teacher extends Person implements Cloneable {
 
     public static void main(String[] args) {
         Teacher t = new Teacher("Gulnar");
-        Person p = new Person();
-        boolean ins = p instanceof Person;
-        System.out.println(ins);
         System.out.println(t);
         System.out.println("t before" + t.getName());
         try {

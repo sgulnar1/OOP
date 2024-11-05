@@ -2,6 +2,11 @@ public class FinalTest extends Person {
     private static final int a;
     private int c =7;
 
+    @Override
+    public String className(Person person) {
+        return "FinalTest";
+    }
+
     public FinalTest() {
         super();
 

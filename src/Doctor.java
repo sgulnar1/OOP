@@ -1,5 +1,5 @@
 
-public class Doctor extends Person {
+public class Doctor extends Person implements SalaryMoney {
 
     private String position;
 
@@ -21,5 +21,16 @@ public class Doctor extends Person {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    @Override
+    public int getSalary() {
+        return 10000;
+    }
+
+
+    @Override
+    public void comman() {
+
     }
 }

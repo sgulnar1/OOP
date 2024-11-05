@@ -1,4 +1,3 @@
-import java.io.Serializable;
 import java.util.function.*;
 
 public class Main {
@@ -9,7 +8,16 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        var a='d';
+        Person person1 = new Person() {
+            @Override
+            public String className(Person person) {
+                return "Person";
+            }
+        };
+        person1.setPersonDetails(new TeacherDetailsImpl());
+
+
+        var a = 'd';
         Person person = new Doctor();
         System.out.println("print: " + person.className(person));
         DoctorWorkQuality doctorWorkQuality = new DoctorWorkQuality();
@@ -64,12 +72,7 @@ public class Main {
         consumer.accept("Hello World");
 
 
-        IntConsumer intConsumer = new IntConsumer() {
-            @Override
-            public void accept(int value) {
-                System.out.println(value);
-            }
-        };
+        IntConsumer intConsumer = System.out::println;
         intConsumer.accept(5);
         BiConsumer<String, Integer> biConsumer = new BiConsumer<String, Integer>() {
 

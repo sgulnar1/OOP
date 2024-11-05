@@ -3,6 +3,15 @@ public abstract class Person implements PersonInterface, FuncInterface.NestedInt
     private int age;
     private String surname;
     private String email;
+    private PersonDetails personDetails;
+
+    public PersonDetails getPersonDetails() {
+        return personDetails;
+    }
+
+    public void setPersonDetails(PersonDetails personDetails) {
+        this.personDetails = personDetails;
+    }
 
     public String getName() {
         return name;
